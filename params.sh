@@ -53,8 +53,8 @@ LANG="en_US.UTF-8"
 # IF _format="" partition will NOT be formated        *
 # otherwyse it will be formated with specified format *
 # *****************************************************
-#image_name=""
-image_name="minimal"
+image_name=""
+#image_name="minimal"
 #image_name="/dev/sdg"
 
 
@@ -79,8 +79,8 @@ _format="btrfs"
 # When creating the image with "image_from_dir" script*
 # "linuxsize" is calculated from directory size       *
 # *****************************************************
-fatsize=64
-linuxsize=800
+fatsize=100
+linuxsize=2048
 
 
 # *****************************************************
