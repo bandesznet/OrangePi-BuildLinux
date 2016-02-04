@@ -255,12 +255,14 @@ fi
 # =========================================
 
 #=== Create swapfile =============================================================
-echo "================================================"
-echo "Creating swapfile."
-echo "================================================"
-fallocate -l 1G $odir/swapfile > /dev/null 2>&1
-chmod 600 $odir/swapfile
-mkswap $odir/swapfile
+if [ ! "${swapfilesize}" = "" ]; then
+    echo "================================================"
+    echo "Creating swapfile."
+    echo "================================================"
+    fallocate -l ${swapfilesize} $odir/swapfile > /dev/null 2>&1
+    chmod 600 $odir/swapfile
+    mkswap $odir/swapfile
+fi
 
 # =========================================
 
@@ -339,7 +341,10 @@ else
 fi
 echo "/dev/mmcblk0p1  /media/boot  vfat  defaults  0 0" >> $odir/etc/fstab
 echo "tmpfs /tmp  tmpfs nodev,nosuid,mode=1777  0 0" >> $odir/etc/fstab
-echo "/swapfile none swap defaults 0 0" >> $odir/etc/fstab
+
+if [ ! "${swapfilesize}" = "" ]; then
+    echo "/swapfile none swap defaults 0 0" >> $odir/etc/fstab
+fi
 
 sync
 

@@ -7,7 +7,7 @@
 # *****************************************************
 # Set to "yes" to create realy minimal image          *
 # *****************************************************
-ONLY_BASE="yes"
+ONLY_BASE="no"
 
 
 # *****************************************************
@@ -79,8 +79,14 @@ _format="btrfs"
 # When creating the image with "image_from_dir" script*
 # "linuxsize" is calculated from directory size       *
 # *****************************************************
-fatsize=100
+fatsize=128
 linuxsize=2048
+
+# *****************************************************
+# Create swapfile in the root                         *
+# disable swapfile: swapfilesize=""                   *
+# *****************************************************
+swapfilesize="1G"
 
 
 # *****************************************************
