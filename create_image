@@ -156,7 +156,7 @@ fi
 # ***************************
 echo "Creating \"sources.list\""
 case ${distro} in
-trusty|utopic|precise|vivid|wily*)
+trusty|utopic|precise|vivid|wily|xenial*)
 cat > $odir/sources.list << _EOF_
 deb $repo/ $distro main restricted universe multiverse
 deb-src $repo/ $distro main restricted universe multiverse
