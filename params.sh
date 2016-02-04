@@ -7,7 +7,7 @@
 # *****************************************************
 # Set to "yes" to create realy minimal image          *
 # *****************************************************
-ONLY_BASE="no"
+ONLY_BASE="yes"
 
 
 # *****************************************************
@@ -66,8 +66,8 @@ image_name=""
 # Used when creating the system directly on SDCard or *
 # SDCard image file and in "image_from_dir" script    *
 # *****************************************************
-_format="ext4"
-#_format="btrfs"
+#_format="ext4"
+_format="btrfs"
 
 
 # *****************************************************
