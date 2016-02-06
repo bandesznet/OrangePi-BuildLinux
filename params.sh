@@ -79,8 +79,8 @@ _format="btrfs"
 # When creating the image with "image_from_dir" script*
 # "linuxsize" is calculated from directory size       *
 # *****************************************************
-fatsize=128
-linuxsize=2048
+fatsize=100
+linuxsize=3500
 
 # *****************************************************
 # Create swapfile in the root                         *

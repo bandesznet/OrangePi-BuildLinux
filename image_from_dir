@@ -235,6 +235,10 @@ fi
 echo "/dev/mmcblk0p1  /media/boot  vfat  defaults  0 0" >> $odir/etc/fstab
 echo "tmpfs /tmp  tmpfs nodev,nosuid,mode=1777  0 0" >> $odir/etc/fstab
 
+if [ ! "${swapfilesize}" = "" ]; then
+    echo "/swapfile none swap defaults 0 0" >> $odir/etc/fstab
+fi
+
 echo ""
 
 echo "sync, please wait ..."
